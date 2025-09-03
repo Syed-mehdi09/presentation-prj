@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike Air Max - Ecommerce Product Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            color: #ff6b6b;
+        }
+        .product {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #fff;
+            margin: 20px 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .product-image {
+            flex: 1;
+            min-width: 300px;
+            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .main-image {
+            width: 100%;
+            max-width: 400px;
+            margin-bottom: 20px;
+        }
+        .main-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .thumbnails {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+        .thumbnail {
+            width: 80px;
+            height: 60px;
+            border-radius: 5px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: border-color 0.3s;
+        }
+        .thumbnail:hover {
+            border-color: #ff6b6b;
+        }
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 3px;
+        }
+        .product-details {
+            flex: 1;
+            padding: 40px;
+            min-width: 300px;
+        }
+        .product-details h2 {
+            margin-top: 0;
+            color: #333;
+            font-size: 2em;
+        }
+        .price {
+            font-size: 1.5em;
+            color: #ff6b6b;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        .description {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .size-selector {
+            margin-bottom: 20px;
+        }
+        .size-selector label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .size-options {
+            display: flex;
+            gap: 10px;
+        }
+        .size-option {
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .size-option:hover {
+            background-color: #ff6b6b;
+            color: #fff;
+        }
+        .add-to-cart {
+            background-color: #ff6b6b;
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .add-to-cart:hover {
+            background-color: #ff5252;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            margin-top: 20px;
+        }
+        @media (max-width: 768px) {
+            .product {
+                flex-direction: column;
+            }
+            .product-details {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Nike Shoes </h1>
+    </header>
+    <div class="container">
+        <div class="product">
+            <div class="product-image">
+                <div class="main-image">
+                    <img id="mainImg" src="https://images.unsplash.com/photo-1549298916-b41d501d3772?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Nike Air Max Shoes">
+                </div>
+                <div class="thumbnails">
+                    <div class="thumbnail" onclick="changeImage('https://images.unsplash.com/photo-1549298916-b41d501d3772?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80')">
+                        <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=80&q=80" alt="Shoe 1">
+                    </div>
+                    <div class="thumbnail" onclick="changeImage('https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80')">
+                        <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=80&q=80" alt="Shoe 2">
+                    </div>
+                    <div class="thumbnail" onclick="changeImage('https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80')">
+                        <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=80&q=80" alt="Shoe 3">
+                    </div>
+                    <div class="thumbnail" onclick="changeImage('https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80')">
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=80&q=80" alt="Shoe 4">
+                    </div>
+                </div>
+            </div>
+            <div class="product-details">
+                <h2>Nike Air Max 270</h2>
+                <div class="price">₹5,999</div>
+                <p class="description">
+                    Experience ultimate comfort and style with the Nike Air Max 270. Featuring Nike's largest heel Air unit yet for incredible all-day cushioning, this shoe delivers a responsive ride that feels as good as it looks.
+                </p>
+                <div class="size-selector">
+                    <label for="size">Select Size:</label>
+                    <div class="size-options">
+                        <div class="size-option">7</div>
+                        <div class="size-option">8</div>
+                        <div class="size-option">9</div>
+                        <div class="size-option">10</div>
+                        <div class="size-option">11</div>
+                    </div>
+                </div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2023 Brand Shoes Store. All rights reserved.</p>
+    </footer>
+    <script>
+        function changeImage(src) {
+            document.getElementById('mainImg').src = src;
+        }
+    </script>
+</body>
+</html>
