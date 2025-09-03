@@ -19,11 +19,12 @@
                 <li><a href="#pricing">Pricing</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="hamburger">
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </label>
         </nav>
     </header>
 
@@ -38,7 +39,7 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img src="https://via.placeholder.com/600x400/4A90E2/FFFFFF?text=Product+Demo" alt="Product Demo">
+                <img src="https://www.businessfirstonline.co.uk/wp-content/uploads/2023/01/AdobeStock_107228620-900x540.jpg" alt="Product Demo">
             </div>
         </section>
 
@@ -166,25 +167,6 @@
         </div>
     </footer>
 
-    <script>
-        // Mobile menu toggle
-        const hamburger = document.querySelector('.hamburger');
-        const navLinks = document.querySelector('.nav-links');
 
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            hamburger.classList.toggle('active');
-        });
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
 </body>
 </html>
